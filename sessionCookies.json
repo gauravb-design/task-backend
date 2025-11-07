@@ -1,0 +1,72 @@
+[
+  {
+    "name": "redirect_after_login",
+    "value": "{}",
+    "domain": "login.smartsites.com",
+    "path": "/",
+    "expires": 1762608168,
+    "size": 22,
+    "httpOnly": false,
+    "secure": false,
+    "session": false,
+    "sameParty": false,
+    "sourceScheme": "Secure",
+    "sourcePort": 443
+  },
+  {
+    "name": "activecollab_csrf_validator_for_ec3b9128187571e9c5e6d621f6b295b053f201d3",
+    "value": "U6KKrSrWLCSq%2Bg4kBM8VRPr%2F87TdIZw0UoWjO7TJ8FDkvUDu1BUoMg0Jp3XjkX6d%3ACb28sG5MVhFV9f%2B%2B%2FAdt2w%3D%3D",
+    "domain": ".login.smartsites.com",
+    "path": "/",
+    "expires": 1762438967.884542,
+    "size": 177,
+    "httpOnly": false,
+    "secure": true,
+    "session": false,
+    "sameParty": false,
+    "sourceScheme": "Secure",
+    "sourcePort": 443
+  },
+  {
+    "name": "activecollab_us_for_ec3b9128187571e9c5e6d621f6b295b053f201d3",
+    "value": "DTnUwVYcJ9i6z%2FeHvhopOkr0zjXCOp7lHkTEX6g0%2BQ%2Bd%2BaH5XUZDreB3g3AK%2FMAm%3A0Y6663k6iy0zSW2x3u%2BKFQ%3D%3D",
+    "domain": ".login.smartsites.com",
+    "path": "/",
+    "expires": 1762438967.884413,
+    "size": 167,
+    "httpOnly": true,
+    "secure": true,
+    "session": false,
+    "sameParty": false,
+    "sourceScheme": "Secure",
+    "sourcePort": 443
+  },
+  {
+    "name": "activecollab_ul_for_ec3b9128187571e9c5e6d621f6b295b053f201d3",
+    "value": "en_US.UTF-8",
+    "domain": ".login.smartsites.com",
+    "path": "/",
+    "expires": 1762438968.884587,
+    "size": 71,
+    "httpOnly": false,
+    "secure": true,
+    "session": false,
+    "sameParty": false,
+    "sourceScheme": "Secure",
+    "sourcePort": 443
+  },
+  {
+    "name": "PHPSESSID",
+    "value": "45ba33dc1b1080084f2233664021a396",
+    "domain": "login.smartsites.com",
+    "path": "/",
+    "expires": -1,
+    "size": 41,
+    "httpOnly": false,
+    "secure": false,
+    "session": true,
+    "sameParty": false,
+    "sourceScheme": "Secure",
+    "sourcePort": 443
+  }
+]
