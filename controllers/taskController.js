@@ -545,3 +545,49 @@ export const addTaskComment = async (req, res) => {
   }
 };
 
+/**
+ * Delete a completed task
+ * DELETE /api/tasks/:id
+ */
+export const deleteTask = async (req, res) => {
+  try {
+    const task = await Task.findById(req.params.id);
+
+    if (!task) {
+      return res.status(404).json({
+        success: false,
+        message: 'Task not found'
+      });
+    }
+
+    if (task.status !== 'completed') {
+      return res.status(400).json({
+        success: false,
+        message: 'Only completed tasks can be deleted'
+      });
+    }
+
+    await Promise.all([
+      Assignment.deleteMany({ task_id: task._id }),
+      TaskComment.deleteMany({ task: task._id })
+    ]);
+
+    await task.deleteOne();
+
+    console.log(chalk.green(`🗑️ Deleted completed task: ${task.task_name}`));
+
+    res.status(200).json({
+      success: true,
+      message: 'Task deleted successfully'
+    });
+
+  } catch (error) {
+    console.error(chalk.red(`❌ Error deleting task: ${error.message}`));
+    res.status(500).json({
+      success: false,
+      message: 'Error deleting task',
+      error: error.message
+    });
+  }
+};
+

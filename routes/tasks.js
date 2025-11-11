@@ -7,7 +7,8 @@ import {
   updateTaskStatus,
   getTaskStats,
   getTaskComments,
-  addTaskComment
+  addTaskComment,
+  deleteTask
 } from '../controllers/taskController.js';
 import { protect, authorize } from '../middleware/authMiddleware.js';
 
@@ -41,6 +42,12 @@ router.post(
   protect,
   authorize('admin', 'pm', 'pc', 'designer'),
   addTaskComment
+);
+router.delete(
+  '/:id',
+  protect,
+  authorize('admin', 'pm', 'pc'),
+  deleteTask
 );
 
 export default router;

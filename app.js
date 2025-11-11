@@ -9,6 +9,7 @@ import connectDB from './config/db.js';
 import taskRoutes from './routes/tasks.js';
 import runRoutes from './routes/runs.js';
 import userRoutes from './routes/users.js';
+import attendanceRoutes from './routes/attendance.js';
 
 // Load environment variables
 dotenv.config();
@@ -34,6 +35,7 @@ connectDB();
 app.use('/api/tasks', taskRoutes);
 app.use('/api/runs', runRoutes);
 app.use('/api/users', userRoutes);
+app.use('/api/attendance', attendanceRoutes);
 
 // Health check endpoint
 app.get('/health', (req, res) => {
@@ -55,6 +57,7 @@ app.get('/', (req, res) => {
       tasks: '/api/tasks',
       runs: '/api/runs',
       users: '/api/users',
+      attendance: '/api/attendance',
       health: '/health'
     }
   });

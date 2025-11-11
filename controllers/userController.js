@@ -48,6 +48,7 @@ export const login = async (req, res) => {
 
     // Check if user is active
     if (!user.isActive) {
+      console.warn(chalk.yellow(`⚠️ Login attempt for inactive user: ${user.email}`));
       return res.status(401).json({
         success: false,
         message: 'Account is inactive'
